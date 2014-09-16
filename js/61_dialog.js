@@ -18,9 +18,20 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		var commonTab  = tabDivs[0]
 		var specialTab = tabDivs[1]
 		var inputs = $(dlg).find('input')
-		var idInput   = inputs[0]	  
-		var nameInput = inputs[1]	
+//		var idInput   = inputs[0]	  
+		var nameInput = inputs[0]	
                 
+		var equipmentSelect = $(dlg).find('select')[0]
+        for(i in Equipment){
+          var val = 
+		  if(val.group != grp) continue
+		  $('<option value="' + i + '">' + val.name + '</option>').appendTo(equipmentSelect)	  
+		}
+
+        equipmentSelect.change(function(){
+		  alert($(this).value())
+		})
+		/*
 		$(idInput).keyup(function(){
 			if($(idInput).val().length > 20){alert('Пожалуйста, будьте аккуратнее!'); return}
 			var val = $(idInput).val()
@@ -40,7 +51,8 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 			  commonTab: commonTab,
 			  specialTab: specialTab,
 			  marker: marker,
-			  context: Equipment[val]
+			  context: Equipment[val],
+			  group: grp,
 			}
 			var toLoad = 'templates/' + grp
 			$(specialTab).load('/' + toLoad + '.html', function(dat){	
@@ -53,6 +65,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 				}, 500)
 			})
 		})
+		*/
 
 		$(nameInput).keyup(function(){
 			var val = $(nameInput).val().trim()
