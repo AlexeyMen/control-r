@@ -1,17 +1,17 @@
 define({
     webcam_01: {
 		name: 'Вебкамера №1',
-        group: 'webcam'
+        group: 'webcam',
 	},
     webcam_02: {
 		name: 'Вебкамера №2',
-        group: 'webcam'
+        group: 'webcam',
 	},
     dimmer_01: {
-        group: 'light-inner'
+        group: 'light-inner',
 	},
     lights_01: {
-		name: 'Бегущие огни №1'
-        group: 'light-outer'
+		name: 'Бегущие огни №1',
+        group: 'light-outer',
 	},
 })
