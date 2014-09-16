@@ -23,7 +23,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
                 
 		var equipmentSelect = $(dlg).find('select')[0]
         for(i in Equipment){
-          var val = 
+          var val = Equipment[i]
 		  if(val.group != grp) continue
 		  $('<option value="' + i + '">' + val.name + '</option>').appendTo(equipmentSelect)	  
 		}
