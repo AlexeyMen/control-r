@@ -29,7 +29,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		}
 
         $(equipmentSelect).change(function(){
-		  alert($(this).value())
+		  alert($(this).val())
 		})
 		/*
 		$(idInput).keyup(function(){
