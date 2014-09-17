@@ -28,7 +28,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		  $('<option value="' + i + '">' + val.name + '</option>').appendTo(equipmentSelect)	  
 		}
 
-        equipmentSelect.change(function(){
+        $(equipmentSelect).change(function(){
 		  alert($(this).value())
 		})
 		/*
