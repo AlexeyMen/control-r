@@ -31,7 +31,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
         $(equipmentSelect).change(function(){
 		    var val = $(this).val()
 			Locstor.set(val, {})
-			$(idInput).prop('disabled', true)  
+			$(equipmentSelect).prop('disabled', true)  
 			var title = Equipment[val].name
 			if(title){ 
 				$(dlg).dialog('option', 'title', title);
