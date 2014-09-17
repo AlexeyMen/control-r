@@ -29,14 +29,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		}
 
         $(equipmentSelect).change(function(){
-		  alert($(this).val())
-		})
-		/*
-		$(idInput).keyup(function(){
-			if($(idInput).val().length > 20){alert('Пожалуйста, будьте аккуратнее!'); return}
-			var val = $(idInput).val()
-			if(!Equipment || !val || !Equipment[val]) return false;
-			if(!window.debug && Locstor.get(val)){alert('Это оборудование уже привязано к маркеру.'); return}  
+		    var val = $(this).val()
 			Locstor.set(val, {})
 			$(idInput).prop('disabled', true)  
 			var title = Equipment[val].name
@@ -64,6 +57,14 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 				  loadSpecial(params, Locstor)	  
 				}, 500)
 			})
+		})
+		/*
+		$(idInput).keyup(function(){
+			if($(idInput).val().length > 20){alert('Пожалуйста, будьте аккуратнее!'); return}
+			var val = $(idInput).val()
+			if(!Equipment || !val || !Equipment[val]) return false;
+			if(!window.debug && Locstor.get(val)){alert('Это оборудование уже привязано к маркеру.'); return}  
+			// TODO : Возможно, с клавиатуры тоже придется...
 		})
 		*/
 
