@@ -1,5 +1,12 @@
+.control-r-media-center-wrap {
+  top: 50%;
+  margin-top: -106px;
+  height: 212px;  
+}
+
 .control-r-media-center {
-  width: 200px;
-  height: 200px;
+  margin: auto;	
+  width: 659px;
+  height: 212px;
   background-image: url("../img/xbmc-remote.jpg");
 }
