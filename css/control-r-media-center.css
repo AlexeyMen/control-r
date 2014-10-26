@@ -7,3 +7,7 @@
   height: 212px;
   background-image: url("../img/xbmc-remote.jpg");
 }
+.control-r-media-center-remote-key {
+	cursor:pointer;
+	position:absolute;
+}
