@@ -51,7 +51,7 @@
           .css('width',keys[akey]['width'])
           .css('top',keys[akey]['top'])
           .css('left',keys[akey]['left'])
-          .bind('click',{key: keys[akey]['name']},jQuery.proxy(this.pressRemoteKey,this));
+		  .click(function(){alert(keys[akey].name)});
           $(xbmcRemote).append(aremotekey);
       }
 
