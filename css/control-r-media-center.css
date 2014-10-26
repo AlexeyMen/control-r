@@ -1,8 +1,8 @@
 .control-r-media-center {
   position: relative;	
   top: 50%;
-  margin-top: -106px;
   margin: auto;	
+  margin-top: -106px;
   width: 659px;
   height: 212px;
   background-image: url("../img/xbmc-remote.jpg");
