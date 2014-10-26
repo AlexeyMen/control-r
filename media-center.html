@@ -51,10 +51,14 @@
           .css('width',keys[akey]['width'])
           .css('top',keys[akey]['top'])
           .css('left',keys[akey]['left'])
-		  .click(function(){alert(keys[akey].name)});
+		  addRemoteKeyListener(aremotekey, keys[akey].name)
           $(xbmcRemote).append(aremotekey);
       }
 
+      function addRemoteKeyListener(key, name){
+		key.click(function(){alert(name)});
+        
+	  }	  
     </script>
 </html>
 
