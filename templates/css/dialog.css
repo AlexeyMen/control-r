@@ -3,12 +3,15 @@
   background-color: #1d1d1d;
   overflow: no-display !important;
   border:1px solid #615959;
+
 }
 .ui-dialog {
-  /*background: url('images/ui-bg_gloss-wave_55_3d3d3d_500x100.png') repeat-x scroll 50% top #3D3D3D !important;*/
   background-color: #3D3D3D !important;
         overflow: hidden !important; 
          border-radius: 20px;
+      -webkit-box-shadow: 8px 7px 10px 0px rgba(50, 50, 50, 0.67);
+-moz-box-shadow:    8px 7px 10px 0px rgba(50, 50, 50, 0.67);
+ box-shadow: 8px 7px 10px 0 rgba(50, 50, 50, 0.67);        
 }
 
 
@@ -22,15 +25,19 @@
 
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{
     border:none;
+
 }
+
+
 
 .ui-shadow-inset {
     box-shadow: none;
 }
 
 .control-r-dialog-tabs{
-    background:  url('../img/tab-line.png') repeat-x;
+    background:  url('../../templates/img/main/tab-line.png') repeat-x;
     background-position: 0px 41px;
+    height: 100%;
 }
 
 .control-r-dialog-tabs ul{
@@ -78,7 +85,7 @@
 
 .control-r-dialog-tabs  div.main-tab{
                                              
-                                         background: url('../img/dialog/tab-main.png') no-repeat;
+                                         background: url('../../templates/img/main/tab-main.png') no-repeat;
                                          background-size: auto 31px;
                                          background-position: 0 0;
 }
@@ -102,30 +109,62 @@
     color: transparent !important;
     border:none  !important;
 }
-/***************/
 
-                               .control-r-dialog .ui-widget-header{
-                                   background: #3d3d3d;
-                                   color:#1d1d1b;
-                               }
+.tab-main .on-off{
+            background:  url('../../templates/img/main/on-off.png');
+                                         background-size: auto 55px;
+/*                                         background-position: 0px 0px;*/
+                                         background-position: -59px 0px;
+                                         width: 61px;
+                                         height: 55px;
+                                         cursor: pointer;
+                                         position: absolute;
+                                         left: 270px;
+                                         top:72px;
+                                     } 
+
 /*****CONTROLS                                ************/
 .control-r-dialog-tabs .control-r-dialog-tab {
- /* padding-top: 3px; */
- padding: 0;
+  /*padding-top: 15px; */
+ padding: 0px 0px 0px 0px; //up left 
+}
+
+.main-controls{
+    padding: 0px 0px 0px 20px;
+}
+
+.control-r-dialog-tab{
+    height: 100%;
 }
 
 .control-r-dialog-tab input{
-                                   background: url('../img/dialog/input_back.png') repeat-x;
+                                   background: url('../../templates/img/main/input_back.png') repeat-x;
                                    border-radius: 20px;
                                    border: 1px solid rgba(0, 0, 0, 0.25);
                                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
                                    padding-left: 5px;
                                    font-weight: bold;
                                    color:#fff;
-                                   margin-bottom: 10px;
+                                   margin-top: 5px;
+                                   margin-bottom: 20px;
                                    width: 200px;
                                    font-size: 14px;
+                                   height: 25px;
                                }
+                               
+
+                               
+                               .control-r-dialog-tab select option{
+                                   height: 25px;
+                                   
+                               }
+                               .control-r-dialog-tab select:hover{
+                                   background-color: #5e5657;
+                                   
+                               }                           .control-r-dialog-tab select>option:hover{
+                                   background-color: #5e5657;
+                                   
+                               }                               
                                
  .control-r-dialog-tab .control-long{ 
                                 line-height: 40px;
@@ -133,13 +172,15 @@
                                 font-size: 17px;
                                 text-shadow:none;
                                }
+                               
 .control-r-dialog-tab .control-long img {
                                         vertical-align: middle;
                                         margin:0 10px;
                                         width: 26px;
                                      }
+                                     
 .control-r-dialog-tab .control-long button{
-      background: url("../css/control-r-custom/images/ui-bg_glass_40_3d3d3d_1x400.png") repeat-x scroll 50% 50% #3d3d3d;
+      background: url("../../css/control-r-custom/images/ui-bg_glass_40_3d3d3d_1x400.png") repeat-x scroll 50% 50% #3d3d3d;
                                          border-radius: 10px;
                                          height: 40px;
                                          font-size: 10px;
@@ -149,68 +190,89 @@
                                         color:#fff;
                                         width: 40px;
                                         font-weight: bold;
+    float:left;
 
                                      }
                                      .control-r-dialog-tab .control-long button img{
                                          margin: 0 -7px  0;
                                      }                                     
                                      .control-r-dialog-tab .control-long button:hover{
-                                      background: url("../css/control-r-custom/images/ui-bg_glass_60_000000_1x400.png") repeat-x scroll 50% 50% #3d3d3d;
+                                      background: url("../../css/control-r-custom/images/ui-bg_glass_60_000000_1x400.png") repeat-x scroll 50% 50% #3d3d3d;
                                       text-shadow: 0 1px 1px #f3f3f3;
                                          
                                      }     
                                      .control-r-dialog-tab .control-long button:active{
                                       background: none #3d3d3d;
                                          
-                                     }  
-.tab-main .on-off{
-                                         width: 61px;
-                                         height: 55px;
-                                         background: url('../img/dialog/on-off.png') no-repeat;
-                                         background-size: auto 55px;
-                                         background-position: 0px 0px;
-                                         cursor: pointer;
-                                         position: absolute;
-                                         left: 270px;
-                                         top:82px;
-                                     } 
-.tab-work .ct-main{
-    /*border: 1px solid white;*/
-    /*height: 192px;*/
-    height: auto;
-}
-                                     
-.tab-work .ct-footer{
-   /*border: 1px solid red;*/
+                                     }
+.control-r-dialog-tab .control-long div{ 
+}                                     
 
-    background:  url('../img/tab-line.png') repeat-x;
-    color: #fff;   
-    height: 48px;
-    /*margin-top: -48px;*/
+/*   FOOTER */
+.main_switcher{
+        background:  url('../../templates/img/main/tab-line.png') repeat-x;
+    background-position: 0px 0px;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
 }
 
- .tab-work .ct-footer .on-off{
-                                               width: 160px;
-                                         height: 60px;
-                                         /*background: url('/img/modals_ico/on-off-2.png') no-repeat;
-                                         background-size: 90px auto;*/
+.main_switcher .block{
+    height: 40px;
+    width: 125px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.main_switcher .block .on-off{
+        background:  url('../../templates/img/main/on-off-m.png');
+                                         width: 78px;
+                                         height: 35px;
+                                         background-size: auto 80px;
                                          background-position: 0 0;
+                                         float: left;
                                          cursor: pointer;
-                                         position: relative;
-                                         left: 106px;
-                                         top:9px;
-  
-    }
-    
-      .tab-work .ct-footer  .i{
-                                             width: 55px;
-                                         height: 55px;
-                                         background: url('../img/dialog/on-off.svg') no-repeat; 
-                                         background-size: auto 55px; 
-                                         background-position: 0 0;
+
+}
+.main_switcher .block .i{
+            background:  url('../../templates/img/main/on-off.png');
+                                         background-size: auto 35px;
+                                         background-position: -4px 0;
+                                         width: 35px;
+                                         height: 35px;
+                                          float: left;
                                          cursor: pointer;
-                                         position: relative;
-                                         left: 220px;
-                                         top:-56px;
-  
-    }
+                                          margin-left: 10px;
+
+}
+
+ /*
+.styled-select {
+   background: url(../../templates/img/main/select.png) no-repeat ;
+                                            background-size: auto 25px;
+                                         background-position: 207px 10px;
+   height: 36px;
+   border-radius: 20px;
+   overflow: hidden;
+   width: 240px;
+}*/
+
+.control-r-dialog-tab select{
+                                   background: url('../../templates/img/main/input_back.png') repeat-x;
+                                   border-radius: 20px;
+                                   border: 1px solid rgba(0, 0, 0, 0.25);
+                                   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+                                   padding-left: 5px;
+                                   font-weight: bold;
+                                   color:#afabab;
+                                   margin-top: 20px;
+                                   margin-bottom: 10px;
+                                   width: 209px;
+                                   font-size: 14px;
+                                   height: 25px;
+                                    /*-webkit-appearance: none;*/
+                                     overflow: hidden;
+                                  
+                               }

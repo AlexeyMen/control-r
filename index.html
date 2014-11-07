@@ -17,8 +17,11 @@
 		<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css'>
 	    <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css'>
 
+            
 		<script src="js/vendor/modernizr-2.8.0.min.js"></script>
 		<script src='js/vendor/require.js' data-main='js/01_main'></script>
+                
+                
 	</head>
 	<body>
 
@@ -53,9 +56,6 @@
 					</ul>
 			</div>
 		</div>
-		<div data-role='page' id='media-center' data-i18n-title='Media center'>
-          <!-- Media-center -->
-		</div>
 
 		<div id='control-r-hidden-stuff'>
 
@@ -66,26 +66,40 @@
 						<li><a href="#"><div class='tab-z main-tab'></div></a></li>
 						<li><a href="#"><div class='tab-z work-tab'></div></a></li>
 					</ul>
-					<div class='control-r-dialog-tab'>
+					<div class='control-r-dialog-tab tab-main'>
+                                          <div class="main-controls">
 						<div>
-							<select style='color: black'>
+                                                    <div class='styled-select slate'>
+							<select>
 								<option>Выберите из списка</option>
 							</select>
+                                                    </div>
 							<!-- input id="id" type="text"     data-i18n-placeholder='ID (for modal template)' -->
 							<input id="name"  type="text"  data-i18n-placeholder='Name (for modal template)'>
 						</div>
 						<div id="onoff1" class='on-off' data-on='0'></div>
-						<div class='control-long' data-i18n-text='Save the node'>
-							<button id="save" data-on='2'><img src="./img/icones/node-bc.png"></button>
+						<div class='control-long'>
+							<button id="save" data-on='2'><img src="templates/img/main/node-bc.png"></button><div data-i18n-text='Save the node'></div>
 						</div>
-						<div class='control-long' data-i18n-text='Delete marker'>
-							<button  id="del"  data-on='3'><img src="./img/icones/marker-bc.png"></button>
+						<div class='control-long' >
+							<button  id="del"  data-on='3'><img src="templates/img/main/marker-bc.png"></button><div data-i18n-text='Delete marker'></div>
 						</div>
-						<div class='control-long' data-i18n-text='Discard settings'>
-							<button  id="res"  data-on='0'><img src="./img/icones/setting-bc.png"></button>
+						<div class='control-long' >
+							<button  id="res"  data-on='0'><img src="templates/img/main/setting-bc.png"></button><div data-i18n-text='Discard settings'></div>
 						</div>
+                                            </div>    
 					</div>
-					<div class='control-r-dialog-tab'>&nbsp;</div>
+                                    <div class='control-r-dialog-tab'>
+                                          <div class='main'>
+
+                                           </div>
+                                            <div class='main_switcher'>
+                                                <div class="block">
+                                                   <div class="on-off"></div>
+                                                   <div class="i"></div>
+                                                </div>   
+                                           </div>
+                                    </div>
 				</div> <!-- End of tabs   -->
 			</div>     <!-- End of dialog -->
 
@@ -108,6 +122,8 @@
 						<h3 data-i18n-text='Security'>&nbsp;</h3>
 						<ul data-role="listview">
 							<li><a data-eqgrp='webcam' href="#" data-i18n-text='Security cams'>&nbsp;</a></li>
+							<li><a data-eqgrp='mot-sensor' href="#" data-i18n-text='Motion sensor'>&nbsp;</a></li>                                                        
+							<li><a data-eqgrp='group' href="#" data-i18n-text='Group Block'>&nbsp;</a></li>                                                        
 						</ul>		
 					</div>
 
@@ -117,6 +133,8 @@
 							<li><a data-eqgrp='light-inner' href="#"                 data-i18n-text='Inner lighting'>&nbsp;</a></li>
 							<li><a data-eqgrp='light-outer' href="#"                 data-i18n-text='Outer lighting'>&nbsp;</a></li>
 							<li><a data-eqgrp='jack' href="#"                        data-i18n-text='Electric jack'>&nbsp;</a></li>
+							<li><a data-eqgrp='dimmer' href="#"                        data-i18n-text='Dimmer jack'>&nbsp;</a></li>
+							<li><a data-eqgrp='meteo' href="#"                        data-i18n-text='Meteo stantion'>&nbsp;</a></li>
 							<li><a data-eqgrp='temperature-sensor' href="#"          data-i18n-text='Termometr'>&nbsp;</a></li>
 							<li><a data-eqgrp='temperature-humidity-sensor' href="#" data-i18n-text='Temperature and humility sensor'>&nbsp;</a></li>
 							<li><a data-eqgrp='leak-sensor' href="#"                 data-i18n-text='Flood sensor'>&nbsp;</a></li>

@@ -48,7 +48,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 			  group: grp,
 			}
 			var toLoad = 'templates/' + grp
-			$(specialTab).load('/' + toLoad + '.html', function(dat){	
+			$(specialTab).find('.main').load('' + toLoad + '.html', function(dat){	
 				require([toLoad])
 				var widgetLoader = setInterval(function(){
 				  if(!require.defined(toLoad)) return

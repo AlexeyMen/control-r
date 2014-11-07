@@ -1,7 +1,8 @@
 define(function(){
   return function(params, Locstor /* aka Хранилище */){
     var test = params.context.test
-	alert(test)
+    alert('web');
+	alert(test);
   }	
 })
 

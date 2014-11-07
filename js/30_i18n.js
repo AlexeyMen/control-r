@@ -8,7 +8,7 @@ var i18nable = $('[data-i18n-title], [data-i18n-text], [data-i18n-placeholder]')
 loadLang(language)
 
 function loadLang(lng){
-	$.get('/i18n/' + lng + '.txt', function(data){
+	$.get('i18n/' + lng + '.txt', function(data){
 	  var sa = data.split(/[\r\n]/)
 	  for(i in sa){
 		var saa = sa[i].split('=')

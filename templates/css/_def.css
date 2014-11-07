@@ -1,0 +1,9 @@
+._def-header{
+    background: url("/templates/img/icons/jack.png") no-repeat;
+    cursor: pointer;
+    height: 27px;
+    width: 35px;
+        position: relative;
+    top: 3px;
+    
+}

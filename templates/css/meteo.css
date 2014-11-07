@@ -1,0 +1,118 @@
+.meteo-header{
+    background: url("../../templates/img/icons/meteo.png") no-repeat;
+    cursor: pointer;
+    height: 27px;
+    width: 35px;
+        position: relative;
+    top: 3px;
+    
+}
+
+.meteo-header-2{
+    background: url("../../templates/img/icons/meteo-2.png") no-repeat;
+     background-size: auto 23px;
+    cursor: pointer;
+    height: 27px;
+    width: 52px;
+        position: relative;
+    top: 3px;
+    
+}
+
+
+
+.meteo{
+    height: 360px;
+    margin-top: 15px;
+}
+
+.meteo .dis{
+    height: 168px;
+    width: 300px;
+    
+     background: url('../../templates/img/meteo/display.png') no-repeat;
+     font-size: 21px;
+     padding: 25px 0 0 40px;
+     position: relative;
+
+}
+
+.meteo .dis2{
+   left: 345px;
+    position: relative;
+    top: -196px;
+}
+.meteo .dis2 td{
+    text-align: center;
+    height: 80px;
+    padding: 10px;
+}
+
+.meteo .dis2 .i1 img{
+    width: 80px;
+}
+
+.meteo .dis2 .i2{
+    font-size: 46px;
+}
+.meteo .dis2 .i3{
+}
+.meteo .dis2 .i4{
+    font-size: 34px;
+}
+
+.meteo .graf{
+    height: 140px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+    top:-200px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.meteo-informer{
+    width: 100%;
+    height: 100%;
+    padding-left: 14px;
+}
+
+.meteo-informer .m-info{
+   background: url("../../templates/img/main/vert-line.png") repeat-y scroll 133px 0 / 4px auto rgba(0, 0, 0, 0);
+    float: left;
+    height: 355px;
+    margin: 19px 0 5px 8px;
+    width: 139px;
+    
+}
+
+.meteo-informer .m-info .day{
+     width: 100%;
+     font-size: 38px;
+     color: #fff;
+          margin: 30px 24px 26px 20px;
+}
+.meteo-informer .m-info .icon{
+     width: 100%;
+}
+
+.meteo-informer .m-info .t{
+     width: 100%;
+     font-size: 38px;
+     color: #fff;
+            margin: 0px;  
+     position: absolute;
+     top: 290px; 
+
+}
+
+   .meteo .draw-z{
+    background-color: #606060;
+    border-radius: 10px;
+    height: 150px;
+    left: 10px;
+    position: absolute;
+    top: 260px;
+    width: 636px;
+        
+    }
