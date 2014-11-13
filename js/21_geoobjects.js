@@ -5,7 +5,7 @@ define({
 		zoom: 6,
 	  },
 	  moscow: {
-	    icon: 'flat',
+	    icon: 'apartments',
 		label: 'Квартира в Москве',
 		lat: 55.86394561882641, 
 		lng: 37.66767740249634, 
@@ -14,7 +14,7 @@ define({
 		],
 	  }, 
 	  chelny: {
-	    icon: 'house',
+	    icon: 'cottage',
 		label: 'Коттедж в Челнах',
 		lat: 55.680875171065466,
 		lng: 52.30069398880005,
@@ -23,7 +23,7 @@ define({
 		],
 	  },
 	  yarik: {
-	    icon: 'plant',
+	    icon: 'factory',
 		label: 'Производство в Ярославле',
 		lat: 57 + 39/60,
 		lng: 39 + 51/60,

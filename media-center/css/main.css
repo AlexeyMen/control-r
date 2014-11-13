@@ -1,0 +1,36 @@
+html: {height: 100%}
+#media-center {
+  height: 100%;	
+}
+.control-r-media-center {
+  position: relative;
+  width: 1024px;
+  height: 600px;
+  top: 50%;
+  margin: auto;
+  margin-top: -300px;
+  background-image: url('/media-center/img/bg_1024x600.png')
+}
+
+.control-r-media-center-playlist {
+  position: absolute;
+  width:  340px;
+  height: 360px;
+  right: 24px;
+  top:   24px;
+  background-color: red;
+  scroll: vertical;
+}
+
+.control-r-media-center-button {
+  position: absolute;
+  width:  32px;
+  height: 32px;
+  background-color: red;
+  cursor: pointer;
+}
+
+.control-r-media-center-power {
+  top: 50px;
+  left: 50px;
+}

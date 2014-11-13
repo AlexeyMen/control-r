@@ -1,8 +1,8 @@
 define(['geomap', 'geoobjects', 'dialog', 'equipment'], function(L, objs, Dialog, Equipment){
 	$('a[data-eqgrp]').each(function(){
-	  var li = $(this).parent()
-	  var eqgrp = $(this).attr('data-eqgrp')
-	  $(li).addClass('control-r-icon-link').addClass('control-r-icon-' + eqgrp) 
+	  //var li = $(this).parent()
+	  //var eqgrp = $(this).attr('data-eqgrp')
+	  //$(li).addClass('control-r-icon-link').addClass('control-r-icon-' + eqgrp) 
 	  $(this).draggable({helper: 'clone', appendTo: 'body', revert: true})
 	})
     for(i in objs) if(i != 'view') setMap(L, i, objs, Dialog, Equipment)
@@ -32,10 +32,11 @@ function setMap(L, i, objs, Dialog, Equipment){
 		  drop: function(ev, ui){
 		    if(!$(ui.helper).is('[data-eqgrp]')) return 
 			var grp = $(ui.helper).attr('data-eqgrp')
+			var categ = $(ui.helper).attr('data-categ')
 			loadWidgetsCss(grp)
 			if(!Equipment.markers) Equipment.markers = {}
 		    if(!Equipment.markers[grp]) Equipment.markers[grp] = new L.LayerGroup().addTo(objs[i].map)
-		    var icon = new Icon({iconUrl: '/img/markers/comfort/test.png'})
+		    var icon = new Icon({iconUrl: '/markers/' + categ + '/' + grp})
 		    var marker = new L.Marker(objs[i].map.mouseEventToLatLng(ev), {icon: icon,draggable: true})
 		    Equipment.markers[grp].addLayer(marker)
 			Dialog(grp, objs[i], marker)
