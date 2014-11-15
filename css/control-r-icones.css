@@ -8,8 +8,8 @@
 .control-r-icon-rain a:hover:before,
 .control-r-icon-therm-hum a:before,
 .control-r-icon-therm-hum a:hover:before,
-.control-r-icon-pir a:before,
-.control-r-icon-pir a:hover:before,
+.control-r-icon-mot-sensor a:before,
+.control-r-icon-mot-sensor a:hover:before,
 .control-r-icon-glass a:before,
 .control-r-icon-glass a:hover:before,
 .control-r-icon-meteo a:before,
@@ -34,14 +34,14 @@
 .control-r-icon-window-secur a:hover:before,
 .control-r-icon-door a:before,
 .control-r-icon-door a:hover:before,
-.control-r-icon-dim-jack a:before,
-.control-r-icon-dim-jack a:hover:before,
+.control-r-icon-dimmer a:before,
+.control-r-icon-dimmer a:hover:before,
 .control-r-icon-dim-jack-scale a:before,
 .control-r-icon-dim-jack-scale a:hover:before,
 .control-r-icon-dim-switch a:before,
 .control-r-icon-dim-switch a:hover:before,
-.control-r-icon-switch-energ a:before,
-.control-r-icon-switch-energ a:hover:before,
+.control-r-icon-group a:before,
+.control-r-icon-group a:hover:before,
 .control-r-icon-window-energ a:before,
 .control-r-icon-window-energ a:hover:before,
 .control-r-icon-conditioner-energ a:before,
@@ -216,10 +216,10 @@ a.control-r-icon-props:hover:before,
 .control-r-icon-therm-hum a:hover:before {
   background-position: -44px -176px;
 }
-.control-r-icon-pir a:before {
+.control-r-icon-mot-sensor a:before {
   background-position: 0px -220px;
 }
-.control-r-icon-pir a:hover:before {
+.control-r-icon-mot-sensor a:hover:before {
   background-position: -44px -220px;
 }
 .control-r-icon-glass a:before {
@@ -294,10 +294,10 @@ a.control-r-icon-props:hover:before,
 .control-r-icon-door a:hover:before {
   background-position: -44px -748px;
 }
-.control-r-icon-dim-jack a:before {
+.control-r-icon-dimmer a:before {
   background-position: -88px 0px;
 }
-.control-r-icon-dim-jack a:hover:before {
+.control-r-icon-dimmer a:hover:before {
   background-position: -132px 0px;
 }
 .control-r-icon-dim-jack-scale a:before {
@@ -312,10 +312,10 @@ a.control-r-icon-props:hover:before,
 .control-r-icon-dim-switch a:hover:before {
   background-position: -132px -88px;
 }
-.control-r-icon-switch-energ a:before {
+.control-r-icon-group a:before {
   background-position: -88px -132px;
 }
-.control-r-icon-switch-energ a:hover:before {
+.control-r-icon-group a:hover:before {
   background-position: -132px -132px;
 }
 .control-r-icon-window-energ a:before {

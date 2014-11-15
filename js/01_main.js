@@ -22,7 +22,7 @@ requirejs.config({
 	equipment:     '63_equipment',
 	Chart:         'vendor/Chart.min',
 	templates:     '../templates/js',
-	media_center:  '../media-center/js/main',
+	media_plus:  '../media-center/js/main',
   },
 
   shim: {
