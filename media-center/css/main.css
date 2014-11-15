@@ -12,25 +12,70 @@ html: {height: 100%}
   background-image: url('/media-center/img/bg_1024x600.png')
 }
 
+.control-r-media-center-album-cover,
 .control-r-media-center-playlist {
   position: absolute;
-  width:  340px;
-  height: 360px;
+  width:  315px;
+  height: 335px;
   right: 24px;
-  top:   24px;
-  background-color: red;
+  background-color: #3d3d3d;
+  color: #00fff2;
   scroll: vertical;
+  padding: 5px;
+  border: 1px solid #00fff3;
+  border-radius: 6px;
+}
+
+.control-r-media-center-time, 
+.control-r-media-center-composition {
+  position: absolute;
+  background-color: #3d3d3d;
+  color: #00fff2;
+  bottom:   120px;
+  font-family: sans-serif;
+  font-size: 16pt;
+  text-decoration: small-caps;
+}
+
+.control-r-media-center-composition {
+  left: 42px;
+}
+
+.control-r-media-center-time {
+  right: 242px;
+  text-align: right;
+}
+
+.control-r-media-center-playlist {
+  top:   24px;
+}
+
+.control-r-media-center-album-cover img{
+  margin: auto;
+  width: 150px;
+  height: 150px;  
+}
+.control-r-media-center-album-cover {
+  width: 150px;
+  height: 150px;
+  bottom: 22px;  
 }
 
 .control-r-media-center-button {
   position: absolute;
   width:  32px;
   height: 32px;
-  background-color: red;
+/*  background-color: red; */
   cursor: pointer;
 }
 
 .control-r-media-center-power {
   top: 50px;
   left: 50px;
+}
+
+.control-r-media-center-bar-gauge {
+  position: absolute;
+  bottom: 23px;
+  left: 280px;
 }

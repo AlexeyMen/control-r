@@ -22,7 +22,8 @@ requirejs.config({
 	equipment:     '63_equipment',
 	Chart:         'vendor/Chart.min',
 	templates:     '../templates/js',
-	media_plus:  '../media-center/js/main',
+	media_plus:    '../media-center/js/main',
+	bar_gauge:     'vendor/jquery.BarGauge',
   },
 
   shim: {
@@ -32,6 +33,7 @@ requirejs.config({
     wheel:         {deps: ['jquery_wheel']},
     dragdrop:      {deps: ['jquery_ui']},
     dialog:        {deps: ['local_storage']},
+    media_plus:    {deps: ['bar_gauge']},
   }
 })
 
