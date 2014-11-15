@@ -7,7 +7,7 @@ define(['jquery_mobile'], function(){
 		theme: 'a',
 		html: ""
 	  });
-      require(['wheel', 'geomap', 'dragdrop', 'media_center'])
+      require(['wheel', 'geomap', 'dragdrop', 'media_plus'])
 	})
 })
 

@@ -1,5 +1,5 @@
 define(['equipment', 'locstor'], function(Equipment, Locstor){
-	return function(grp, context, marker){
+	return function(grp, context, marker, activeIcon){
 	    var equipCount = Locstor.get('EquipmentCounter')
 		if(!equipCount) equipCount = 0
         var defaultTitle = 'Новое устройство ' + equipCount++
@@ -14,13 +14,14 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		}
  	    var tabs = $(dlg).find('.control-r-dialog-tabs').tabs()
         var dialog = $(dlg).dialog({width: 399, height: 330, title: defaultTitle})
+
 		var tabDivs = $(dlg).find('.control-r-dialog-tab')
 		var commonTab  = tabDivs[0]
 		var specialTab = tabDivs[1]
 		var inputs = $(dlg).find('input')
 //		var idInput   = inputs[0]	  
 		var nameInput = inputs[0]	
-                
+        marker.dialog = dialog        
 		var equipmentSelect = $(dlg).find('select')[0]
         for(i in Equipment){
           var val = Equipment[i]
@@ -32,6 +33,7 @@ define(['equipment', 'locstor'], function(Equipment, Locstor){
 		    var val = $(this).val()
 			Locstor.set(val, {})
 			$(equipmentSelect).prop('disabled', true)  
+            marker.setIcon(activeIcon)
 			var title = Equipment[val].name
 			if(title){ 
 				$(dlg).dialog('option', 'title', title);
