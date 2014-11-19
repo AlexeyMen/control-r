@@ -20,6 +20,7 @@ requirejs.config({
 	dragdrop:      '60_drag-n-drop',
 	dialog:        '61_dialog',
 	equipment:     '63_equipment',
+	socket:        '80_socket',
 	Chart:         'vendor/Chart.min',
 	templates:     '../templates/js',
 	media_plus:    '../media-center/js/main',

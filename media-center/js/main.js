@@ -1,13 +1,29 @@
 $(function(){
-  $('#media-center .control-r-media-center-button').click(function(){
-    alert(getAction(this))
+  $('#media-player .control-r-media-center-button').click(function(){
+      var act = getAction(this)
+	  $.ajax({
+		type: 'GET',
+		url: '/xbmc/control/' + act,
+		dataType: 'json',
+		contentType: 'application/json',
+		success: function(dat){
+		  //alert(JSON.stringify(dat))
+		}		
+	  })
   })
+  $('.control-r-media-center-left-panel').height($(window).height())
+  $('.control-r-media-template').css('visibility', 'visible')
+  setGauge(0.01)	
+  require(['socket'])
+})
+
+function setGauge(val){
   $('.control-r-media-center-bar-gauge').BarGauge({
 	  backgroundColor: "#3d3d3d",           // Color of the Progress / Gauge Bar 
 	  color: "#00fff2",     // Background color of Progress / Gauge Bar
 	  width: "466px",      // Default width of Bar (Original Graphic Size of faceplate)
 	  height: "72px",      // Default height of Bar
-	  value: 0.5,             // Value of Bar Gauge (Current Position)
+	  value: val,             // Value of Bar Gauge (Current Position)
 	  goal: 1.00,          // Goal of Bar Gauge (Maximum Position)
 	  //title: "Eric Clapton. Rockin' Chair",       // Default Title of Bar Gauge
 	  title: "",       // Default Title of Bar Gauge
@@ -23,7 +39,7 @@ $(function(){
 	  thouSeparator: ',',      // Default Thousands seperator I.E. 1,000 or 1.000
 	  decSeparator: '.'        // Default Decimal Separator I.E. 0.001 or 0,001
   })
-})
+}
 
 function getAction(el){
   var classes = $(el).attr('class').split(/\s+/)
