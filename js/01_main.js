@@ -1,47 +1,36 @@
 requirejs.config({
   waitSeconds: 30,		
-//  urlArgs: "bust=" + (new Date()).getTime(),		
   baseUrl: 'js',
   paths: {
+    spinlib:       'vendor/spin.min',
+    spin:          '10_spin',
+    h5bp:          '11_h5bp',
+	socketbox:     '12_socketbox',
+	socket:        '14_socket',
+    css:           '20_css',
+    pageslib:      '21_pageslib',
+    pages:         '22_pages',
+    i18n:          '90_i18n',
+    mobile_css:    '91_mobile_css',
+    mobile:        '92_mobile',
+    media:         '../media-plus/js/main',
+    audio:         '../media-plus/js/audio',
+    cameras:       '../media-plus/js/cameras',
+    conditioners:  '../media-plus/js/conditioners',
 	jquery:        'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
     jquery_ui:     'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min',
     jquery_mobile: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min',
-	jquery_wheel:  'vendor/jquery.mousewheel.min',
-    mapbox:        'https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox',
-    maplabel:      'https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label',
-	//underscore:    'http://underscorejs.org/underscore-min.js',
-	//backbone:      'http://backbonejs.org/backbone-min',
-	//local_storage: 'http//cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.13/backbone.localStorage-min.js',
-	local_storage: 'vendor/locstor.min',
-	pages:         '20_pages',
-	geoobjects:    '21_geoobjects',
-	wheel:         '41_wheel',
-	geomap:        '50_geomap',
-	dragdrop:      '60_drag-n-drop',
-	dialog:        '61_dialog',
-	equipment:     '63_equipment',
-	socket:        '80_socket',
-	Chart:         'vendor/Chart.min',
-	templates:     '../templates/js',
-	media_plus:    '../media-center/js/main',
-	bar_gauge:     'vendor/jquery.BarGauge',
+	gauge:         'vendor/jquery.BarGauge',
   },
 
   shim: {
-    i18n:          {deps: ['jquery']},
-    maplabel:      {deps: ['mapbox']},
-    geomap:        {deps: ['maplabel']},
-    wheel:         {deps: ['jquery_wheel']},
-    dragdrop:      {deps: ['jquery_ui']},
-    dialog:        {deps: ['local_storage']},
-    media_plus:    {deps: ['bar_gauge']},
+    mobile:        {deps: ['i18n', 'mobile_css', 'jquery_mobile']},
+    pageslib:      {deps: ['jquery', 'css']},
+    media:         {deps: ['pageslib', 'pages', 'audio', 'conditioners', 'cameras', 'socketbox']},
+    audio:         {deps: ['gauge']},
+    gauge:         {deps: ['jquery']},
+    socket:        {deps: ['socketbox']},
   }
 })
 
-if(window.top.location.hash){
-   	window.top.location.hash = ''
-   	window.top.location.reload(true)
-}
-else require(['pages'])
-
-window.debug = true
+require(['h5bp', 'spin', 'socket'])
