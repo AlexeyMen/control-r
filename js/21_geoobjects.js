@@ -15,6 +15,8 @@ function prepareGeoobject(boxes, i){
 		$(header).find('h1').text(objs[i].label)
 		var fillLeftPanel = pages['geo'].fillLeftPanel
         fillLeftPanel(leftPanel, objs, null, [i])			
+		var createCollapsible = pages['geo'].createCollapsible
+		var clps = 
 		$(page).on('pageshow', function(){
 			$(page).removeClass('hidden')
 			$(page).width($(window).width())

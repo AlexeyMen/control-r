@@ -3,6 +3,7 @@ define(['boxes', 'css'], function(boxes, requireCss){
   requireCss('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css')
   var crPages = boxes.pages
   crPages['geo'].fillLeftPanel = fillLeftPanel
+  crPages['geo'].createCollapsible = createCollapsible
   crPages['geo'].prepareWidgets = function(page, main, header, leftPanel, rightPanel){
 	  var anchs = $(header).find('a')
 	  $(anchs[1]).remove()
@@ -29,9 +30,7 @@ define(['boxes', 'css'], function(boxes, requireCss){
 })
 
 function fillLeftPanel(leftPanel, geoobjects, excludeFromMenu, excludeFromGeo){
-    var geoDiv = $("<div id='geo-objects' data-role='collapsible' data-inset='false' data-iconpos='right' class='control-r-header-collapsible'>").appendTo(leftPanel)
-	$("<h3 class='control-r-icon control-r-icon-objs' data-i18n-text='List of objects'>&nbsp;</h3>").appendTo(geoDiv)
-	var ul = $("<ul data-role='listview'></ul>").appendTo(geoDiv)
+	var ul = $(createCollapsible(leftPanel, 'List of objects')).appendTo(leftPanel).find('ul')[0]
 	for(var i in geoobjects){
 	    if(i == 'view')	continue
 		checkLi("<li><a href='#cr-page-" + i + "'>" + geoobjects[i].label + "</a></li>", ul, excludeFromGeo)
@@ -42,6 +41,13 @@ function fillLeftPanel(leftPanel, geoobjects, excludeFromMenu, excludeFromGeo){
 	checkLi("<li><a href='#cr-page-userdata'    data-i18n-text='Personal data'></a></li>", ul, excludeFromMenu)
 	checkLi("<li><a  href='#cr-page-support'    data-i18n-text='Technical support'></a></li>", ul, excludeFromMenu)
 	checkLi("<li><a  href='#cr-page-media-plus' data-i18n-text='Media plus'></a></li>", ul, excludeFromMenu)
+}
+
+function createCollapsible(panel, title){
+    var div = $("<div data-role='collapsible' data-inset='false' data-iconpos='right'>")
+	$("<h3 data-i18n-text='" + title + "'></h3>").appendTo(div)
+	$("<ul data-role='listview'></ul>").appendTo(div)
+	return div 
 }
 
 function checkLi(html, ul, excludeLi){
