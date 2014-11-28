@@ -1,8 +1,10 @@
-define(function(){
+define(['css', 'boxes'], function(requireCss, boxes){
   requireCss('media-plus/css/media-space.css')	
-  var crPages = require('pages')	
-  crPages['media-plus'].prepareWidgets = function(page){
-	  var pageContent = $(page).find('[data-role=cr-page-content]').addClass('cr-media-space')[0]
+  var pages = boxes.pages	
+  var mediaPlus = pages['media-plus']	
+  if(!mediaPlus)  return	
+  mediaPlus.prepareWidgets = function(page, main, header, leftPanel, rightPanel){
+	  var pageContent = $("<div class='cr-media-space'>").appendTo(main)
 	  var mediaLeft   = $('<div class="cr-media-left"/>').appendTo(pageContent)
 	  var mediaCenter = $('<div class="cr-media-center"/>').appendTo(pageContent)
 	  var mediaRight  = $('<div class="cr-media-right"/>').appendTo(pageContent)
@@ -10,9 +12,12 @@ define(function(){
 	  var rightArray  = ['cameras', 'webcams', 'conditioners', 'curtains', 'garlands']
 	  setButtons(leftArray, mediaLeft, mediaCenter)
 	  setButtons(rightArray, mediaRight, mediaCenter)
-	  if(!crPages['geo'])$(page).find('[data-role=header], [data-role=panel]').remove()
+	  var panels = $(page).find('[data-role=panel]')
+	  $(rightPanel).remove()
+	  var fillLeftPanel = pages['geo'].fillLeftPanel
+      var objs = boxes.geoobjects
+      fillLeftPanel(leftPanel, objs, ['media-plus'], null)			
   }	
-  require(['mobile'])	
 })
 
 function setButtons(arr, div, center){

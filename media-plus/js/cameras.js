@@ -1,4 +1,4 @@
-define(function(){
+define(['css'], function(requireCss){
 	return function(center){
 		$(center).css('background-image', 'none')
 		requireCss('media-plus/css/cameras.css')  

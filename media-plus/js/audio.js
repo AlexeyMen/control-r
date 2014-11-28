@@ -1,4 +1,4 @@
-define(function(){
+define(['css', 'boxes'], function(requireCss, boxes){
 	return function(center){
 		$(center).css('background-image', 'none')
 		requireCss('media-plus/css/audio-player.css')  
@@ -19,7 +19,7 @@ define(function(){
 			var gauge = $(center).find('.cr-audio-gauge div')[0]
 			setGauge(gauge, .01)
 			var barGauge = $(gauge).find('.barGauge_bar')[0]
-			var socketBox = require('socketbox')
+			var socketBox = boxes.socketTargets
 			var ul = $('.cr-audio-playlist ul')	
 			var currentPosition = -1
 			socketBox['gauge'] = function(json){
