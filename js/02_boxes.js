@@ -19,8 +19,9 @@ define({
 		label: 'Квартира в Москве',
 		lat: 55.86394561882641, 
 		lng: 37.66767740249634, 
-		schemes: [
-		  {uuid: '30663506-bb10-44c8-b7ad-8e2bc96340bc', label: 'Общий план'},
+		rooms: [
+		  {schemeDir: '30663506-bb10-44c8-b7ad-8e2bc96340bc', label: 'Общий план'},
+		  {schemeDir: 'e85a948b-8f25-4f4a-ba57-60b8c9fc88e6', label: 'Гостиная'},
 		],
 	  }, 
 	  chelny: {
@@ -28,8 +29,8 @@ define({
 		label: 'Коттедж в Челнах',
 		lat: 55.680875171065466,
 		lng: 52.30069398880005,
-		schemes: [
-		  {uuid: 'e85a948b-8f25-4f4a-ba57-60b8c9fc88e6', label: 'Общий план'},
+		rooms: [
+		  {schemeDir: 'e85a948b-8f25-4f4a-ba57-60b8c9fc88e6', label: 'Общий план'},
 		],
 	  },
 	  yarik: {
@@ -37,9 +38,77 @@ define({
 		label: 'Производство в Ярославле',
 		lat: 57 + 39/60,
 		lng: 39 + 51/60,
-		schemes: [
-		  {uuid: 'e85a948b-8f25-4f4a-ba57-60b8c9fc88e6', label: 'Общий план'},
+		rooms: [
+		  {schemeDir: 'e85a948b-8f25-4f4a-ba57-60b8c9fc88e6', label: 'Общий план'},
 		],
 	  },
-  }
+    },
+	equipmentCategories: {
+		security: {
+			groups: [
+				'Analog camera',
+				'Gas leak',
+				'Light sensor',
+				'Rain sensor',
+				'Temperature/humidity sensor',
+				'Presense sensor',
+				'Glass',
+				'Meteostation',
+				'Ventil',
+				'Webcam',
+				'Alarm button',
+				'Intercom',
+				'Garage',
+				'Barrier',
+				'Bell',
+				'Fire sensor',
+				'Window sensor',
+				'Door sensor'
+			],
+			label: 'Security',
+		},
+		energy: {
+			groups: [
+				'Dimmerable jack',
+				'Discret dimmerable jack',
+				'Dimmerable switch',
+				'Common switch',
+				'Refrigerator',
+				'Conditioner',
+				'Floor lamp',
+				'Reading lamp',
+				'Sconce',
+				'Chandelier',
+				'Soffit 1',
+				'Soffit 2',
+				'Fan',
+				'Heater',
+				'Ventel',
+				'Gas boiler',
+				'Iron',
+				'Washer',
+				'Leak sensor',
+				'Common jack',
+				'Streetlight',
+				'Bulb',
+			],
+			label: 'Energy saving',
+		},
+		comfort: {
+			groups: [
+				'TV-tuner in computer',
+				'DVD-player',
+				'Media center',
+				'Curtains',
+				'Blinds',
+				'Watering',
+				'Projector',
+				'Remote control',
+				'Garland',
+				'Speakers',
+				'Monitor',
+			],
+			label: 'Comfort',
+		},
+	}
 })

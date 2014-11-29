@@ -30,12 +30,16 @@ define(['boxes', 'css'], function(boxes, requireCss){
 })
 
 function fillLeftPanel(leftPanel, geoobjects, excludeFromMenu, excludeFromGeo){
-	var ul = $(createCollapsible(leftPanel, 'List of objects')).appendTo(leftPanel).find('ul')[0]
+	var topLabel =  '<ul data-role="listview">' +
+				    '<li data-icon="delete"><a href="#" data-rel="close" data-i18n-text="Settings">&nbsp;</a></li>' +
+					'</ul><div class="cr-panel-gutter">'		
+    $(topLabel).appendTo(leftPanel)					
+	var ul = $(createCollapsible('List of objects', 'list-of-objects')).appendTo(leftPanel).find('ul')[0]
 	for(var i in geoobjects){
 	    if(i == 'view')	continue
 		checkLi("<li><a href='#cr-page-" + i + "'>" + geoobjects[i].label + "</a></li>", ul, excludeFromGeo)
     }
-	$('<br>').appendTo(leftPanel)
+	$('<div class="cr-panel-gutter">').appendTo(leftPanel)
 	ul = $('<ul data-role="listview">').appendTo(leftPanel)
 	checkLi("<li><a  href='#cr-page-geo' data-i18n-text='Go to the map'></a></li>", ul, excludeFromMenu)
 	checkLi("<li><a href='#cr-page-userdata'    data-i18n-text='Personal data'></a></li>", ul, excludeFromMenu)
@@ -43,8 +47,9 @@ function fillLeftPanel(leftPanel, geoobjects, excludeFromMenu, excludeFromGeo){
 	checkLi("<li><a  href='#cr-page-media-plus' data-i18n-text='Media plus'></a></li>", ul, excludeFromMenu)
 }
 
-function createCollapsible(panel, title){
+function createCollapsible(title, role){
     var div = $("<div data-role='collapsible' data-inset='false' data-iconpos='right'>")
+    if(role) $(div).attr('data-cr-role', role)		
 	$("<h3 data-i18n-text='" + title + "'></h3>").appendTo(div)
 	$("<ul data-role='listview'></ul>").appendTo(div)
 	return div 

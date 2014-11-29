@@ -19,3 +19,8 @@ html, body {
 	margin-top: -134px;
 }
 
+.cr-panel-gutter {
+  content: "\00A0";
+  height: 15px;
+}
+

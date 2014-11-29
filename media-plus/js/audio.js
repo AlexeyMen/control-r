@@ -40,6 +40,8 @@ define(['css', 'boxes'], function(requireCss, boxes){
 				$(ul).empty()  
 				var pl = json.items
 				for(i in pl) preparePlaylistLink(ul, pl, i)
+				$.get('/xbmc/composition')
+				$('.cr-audio-cover img').attr('src', '/xbmc/thumbnail?' + Math.random())	
 			}
 			socketBox['composition'] = function(json){
 				var fields = ['album', 'artist', 'title']
@@ -88,9 +90,9 @@ define(['css', 'boxes'], function(requireCss, boxes){
 			}
 			$.get('/xbmc/volume')
 			$.get('/xbmc/playlist', function(){
-				$.get('/xbmc/composition')
+				//$.get('/xbmc/composition')
 			})
-			$('.cr-audio-cover img').attr('src', '/xbmc/thumbnail?' + Math.random())	
+			//$('.cr-audio-cover img').attr('src', '/xbmc/thumbnail?' + Math.random())	
 		})  
 	}
 })
