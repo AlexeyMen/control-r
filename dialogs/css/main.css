@@ -1,0 +1,127 @@
+.cr-dialog-canvas {
+	background-image: url(../img/bg-dialog.png);
+	width: 404px;
+	height: 304px;
+	position: absolute;
+}
+.cr-dialog-header button,
+.cr-dialog-tabs button,
+.cr-dialog-remove-marker button,
+.cr-dialog-power button{
+	content: '\00A0';
+	margin: 0; padding: 0; border: 0;
+	background-color: transparent;
+}
+.cr-dialog-header{
+	width: 400px;
+	height: 46px;
+	line-height: 46px;
+	margin-left: 2px;
+	background-image: url(../img/header.png);
+}
+.cr-dialog-header button{
+	background-image: url(../img/close.png);
+	float: right;
+	width: 48px;
+	height: 46px;
+}
+.cr-dialog-header label{
+	float: left;
+	margin-left: 23px;
+	color: white;
+	font-weight: bold;
+}
+.cr-dialog-tabs {
+	padding: 8px 0 8px 8px;
+	width: 90%;
+	height: 36px;
+}
+.cr-dialog-tabs button{
+	width: 100px;
+	height: 36px;
+	background-image: url(../img/tabs.png);
+	display: inline-block;
+	float: left;
+	margin-right: 8px; 
+}
+.cr-dialog-remove-marker button{
+	height: 34px;
+	line-height: 34px;
+	background-image: url(../img/marker.png);
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 34px;
+	margin: 20px 0 0 30%; 
+	color: #00ded4;
+}
+.cr-dialog-remove-marker button:hover{
+	color: #00fff2;
+}
+.cr-dialog-tabs button:hover{
+	background-position: 0px -44px;
+}
+.cr-dialog-icon-graph:after,
+.cr-dialog-icon-jack:after {
+	width: 98px;
+	height: 34px;
+	display: inline-block;
+	background-image: url(../img/icons.svg);
+	content: '\00A0';
+}
+.cr-dialog-icon-graph:after {
+	background-position: -600px 0;
+}
+.cr-dialog-icon-jack:after {
+	background-position: 0 0;
+}
+.cr-dialog-icon-graph-active:after {
+	background-position: -700px 0;
+}
+.cr-dialog-icon-jack-active:after {
+	background-position: -100px 0;
+}
+.cr-dialog-row{
+	margin: 15px 0 0 30px;
+}
+.cr-dialog-row label{
+	color: #00ded4;
+	text-align: right;
+	width: 30%;
+	display: inline-block;
+}
+.cr-dialog-row select{
+	background-color: #1d1d1d;
+	color: #00fff2;
+	margin: 0; padding: 0; border: 0;
+	width: 60%;
+}
+.cr-dialog-row span,
+.cr-dialog-row input{
+	background-color: #1d1d1d;
+	color: #00fff2;
+	border: 1px solid #00ded4;
+	border-radius: 7px;
+	padding: 4px;
+	margin-left: 10px;
+	width: 60%;
+}
+.cr-dialog-row span {
+	margin-left: 7px;
+}
+.cr-dialog-power{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 9px;
+	text-align: center;
+}
+.cr-dialog-power button{
+	background-image: url(../img/power.png);
+	background-position: 0 -34px;
+	width: 116px;
+	height: 34px;
+	color: grey;
+	text-align: right;
+	font-size: 10pt;
+	padding: 0 6px 0 12px;
+}

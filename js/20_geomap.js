@@ -2,6 +2,7 @@ define(['boxes', 'css'], function(boxes, requireCss){
   requireCss('https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css')
   requireCss('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css')
   var crPages = boxes.pages
+  crPages['geo'].tunePanels = tunePanels
   crPages['geo'].fillLeftPanel = fillLeftPanel
   crPages['geo'].createCollapsible = createCollapsible
   crPages['geo'].prepareWidgets = function(page, main, header, leftPanel, rightPanel){
@@ -25,6 +26,7 @@ define(['boxes', 'css'], function(boxes, requireCss){
 			  var marker = L.marker([val.lat, val.lng]).bindLabel(val.label, {noHide: true}).addTo(map)
 			  setMarkerClick(marker, i)
 		  }
+	  	  tunePanels(page)	
 	  })
   }
 })
@@ -37,15 +39,31 @@ function fillLeftPanel(leftPanel, geoobjects, excludeFromMenu, excludeFromGeo){
 	var ul = $(createCollapsible('List of objects', 'list-of-objects')).appendTo(leftPanel).find('ul')[0]
 	for(var i in geoobjects){
 	    if(i == 'view')	continue
-		checkLi("<li><a href='#cr-page-" + i + "'>" + geoobjects[i].label + "</a></li>", ul, excludeFromGeo)
+		checkLi("<li><a href='#cr-page-" + i + "' data-cr-icon='" + geoobjects[i].icon + "' >" + geoobjects[i].label + "</a></li>", ul, excludeFromGeo)
     }
 	$('<div class="cr-panel-gutter">').appendTo(leftPanel)
 	ul = $('<ul data-role="listview">').appendTo(leftPanel)
-	checkLi("<li><a  href='#cr-page-geo' data-i18n-text='Go to the map'></a></li>", ul, excludeFromMenu)
-	checkLi("<li><a href='#cr-page-userdata'    data-i18n-text='Personal data'></a></li>", ul, excludeFromMenu)
-	checkLi("<li><a  href='#cr-page-support'    data-i18n-text='Technical support'></a></li>", ul, excludeFromMenu)
-	checkLi("<li><a  href='#cr-page-media-plus' data-i18n-text='Media plus'></a></li>", ul, excludeFromMenu)
+	checkLi("<li><a  href='#cr-page-geo' data-i18n-text='Go to the map' data-cr-icon='go-map'></a></li>", ul, excludeFromMenu)
+	checkLi("<li><a href='#cr-page-userdata'    data-i18n-text='Personal data' data-cr-icon='settings'></a></li>", ul, excludeFromMenu)
+	checkLi("<li><a  href='#cr-page-support'    data-i18n-text='Technical support' data-cr-icon='support'></a></li>", ul, excludeFromMenu)
+	checkLi("<li><a  href='#cr-page-media-plus' data-i18n-text='Media plus' data-cr-icon='media-plus'></a></li>", ul, excludeFromMenu)
 }
+
+function tunePanels(holder){
+	var $winHeight = $(window).height();
+	$(holder).find(".ui-panel").css({
+		"min-height": "240px",
+		"height"    : $winHeight + "px"
+	}).mCustomScrollbar({
+		mouseWheel:{ enable: true },
+		theme: "light-thin",
+		scrollInertia: 200
+	});
+}
+
+$(window).resize(function() {
+	tunePanels($(document))
+})
 
 function createCollapsible(title, role){
     var div = $("<div data-role='collapsible' data-inset='false' data-iconpos='right'>")

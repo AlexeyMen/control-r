@@ -1,4 +1,38 @@
 define({
+	equipment: {
+		webcam_01: {
+			name: 'Вебкамера №1',
+			group: 'webcam',
+		},
+		lights_01: {
+			name: 'Бегущие огни №1',
+			group: 'light-outer',
+		},
+		jack_01: {
+			name: 'Электророзетка №1',
+			group: 'simple-jack',
+		},
+		switch_01: {
+			name: 'Выключатель №1',
+			group: 'jack',
+		},
+		 dimmer_01: {
+			name: 'Диммер №1',
+			group: 'dimmer',
+		},
+		 meteo_01: {
+			name: 'СуперМетео №1',
+			group: 'meteo',
+		},
+		pir_01: {
+			name: 'Датчик движения №1',
+			group: 'mot-sensor',
+		},
+		switch_group_01: {
+			name: 'Группа датчиков №1',
+			group: 'group',
+		},
+	},
 	words: {
 		ready: false,
 		wasError: false,
@@ -69,7 +103,8 @@ define({
 		},
 		energy: {
 			groups: [
-				'Dimmerable jack',
+				'Simple jack',
+				/*'Dimmerable jack',*/
 				'Discret dimmerable jack',
 				'Dimmerable switch',
 				'Common switch',

@@ -10,6 +10,8 @@ requirejs.config({
     spinlib:       'vendor/spin.min',
     h5bp:          'vendor/h5bp',
 	gauge:         'vendor/jquery.BarGauge',
+	tiny_drag:     'vendor/jquery.tiny-draggable.min',
+    custom_scroll: 'vendor/jquery.mCustomScrollbar.concat.min',
     boxes:         '02_boxes',
     spin:          '03_spin',
     css:           '04_css',
@@ -18,6 +20,7 @@ requirejs.config({
     geomap:        '20_geomap',
     geoobjects:    '21_geoobjects',
     pages:         '29_pages',
+    dd_markers:    '30_dd-markers',
     i18n:          '90_i18n',
     mobile:        '91_mobile',
     finish:        '99_finish',
@@ -25,17 +28,22 @@ requirejs.config({
     audio:         '../media-plus/js/audio',
     cameras:       '../media-plus/js/cameras',
     conditioners:  '../media-plus/js/conditioners',
+    dialogs:       '../dialogs/js/',
+    dialog_main:   '../dialogs/js/main',
   },
 
   shim: {
-	mobile:       {deps: ['i18n', 'jquery_mobile']},
+	mobile:       {deps: ['i18n', 'jquery_mobile', 'dd_markers']},
 	i18n:         {deps: ['css', 'pages', 'geoobjects', 'media']},
 	media:        {deps: ['geomap', 'audio', 'cameras', 'conditioners']},
 	audio:        {deps: ['gauge']},
-    geomap:       {deps: ['maplabel']},
+    geomap:       {deps: ['maplabel', 'custom_scroll']},
     geoobjects:   {deps: ['geomap']},
     maplabel:     {deps: ['mapbox']},
     socket:       {deps: ['boxes']},
+    dd_markers:   {deps: ['i18n', 'dialog_main']},
+    dialog_main:  {deps: ['tiny_drag']},
+    tiny_drag:    {deps: ['jquery']},
   }
 })
 

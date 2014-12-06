@@ -30,6 +30,7 @@ Fire sensor=Fire sensor
 Window sensor=Sensor window opening
 Door sensor=Sensor door opening
 Economy of energy=Energy saving
+Simple jack=Electrical socket
 Dimmerable jack=Electrical socket, dimmer
 Discret dimmerable jack=Electrical socket, voltmeter
 Dimmerable switch=Electrical switcher, dimmer

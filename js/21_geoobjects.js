@@ -14,6 +14,7 @@ function prepareGeoobject(boxes, objId){
 	geoPage.prepareWidgets = function(page, main, header, leftPanel, rightPanel){
 		$(header).find('h1').text(objs[objId].label)
 		var fillLeftPanel = pages['geo'].fillLeftPanel
+		var tunePanels = pages['geo'].tunePanels
         fillLeftPanel(leftPanel, objs, null, [objId])			
 		var rooms = objs[objId].rooms
 		var createCollapsible = pages['geo'].createCollapsible
@@ -53,9 +54,8 @@ function prepareGeoobject(boxes, objId){
 			var tilesArray = []  
 			tilesArray.push(tileLayer)
 			objs[objId].map = L.map(mapDiv, {doubleClickZoom: null, attributionControl: null, zoomControl: null, layers: tilesArray, zoom: 3, minZoom: 3, maxZoom: 4, center: [0, 0]})   
+	  	  	tunePanels(page)	
 		})
 	}	
 }
 
-function fillGroups(groups, ul, cat){
-}

@@ -7,40 +7,23 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="css/cr-main.min.css">
-
+        <link rel="stylesheet" href="css/vendor/normalize.css">
+        <link rel="stylesheet" href="css/vendor/h5bp.css">
+        <link rel="stylesheet" href="dialogs/css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-	    <script src='js/vendor/require.js' data-main='js/01_main'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+        <!-- script src="dialogs/js/main.js"></script>
+		<script src="js/vendor/jquery.tiny-draggable.min.js"></script -->
     </head>
     <body>
-		<!--[if lt IE 8]>
-				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
-
-		<div id='cr-page-spinner' data-theme='b' data-role='page'>
-			<div id='cr-spinner'>&nbsp;</div>
-		</div>
-
-		<div class='hidden' id='cr-stuff'>
-			<div id='cr-page-template' data-theme='b' data-role='page' class='hidden'>
-				<div data-role='header' data-position='fixed'>
-					<h1>&nbsp;</h1>
-					<a href="#panel-left"  data-iconpos="notext" data-icon='gear'></a>
-					<a href="#panel-right" data-iconpos="notext" data-icon='bullets'></a>
-				</div>
-				<div role='main' class='ui-content'>&nbsp;</div>
-				<div data-role="panel" data-position-fixed="true" data-display="overlay" id="panel-left">&nbsp;</div>
-				<div data-role="panel" data-position-fixed="true" data-display="overlay" id="panel-right" data-position='right'>&nbsp;</div>
-			</div>	
+		<div class='_hidden'>
 			<div id='cr-dialog-template' class='cr-dialog-canvas'>
 				<div class='cr-dialog-header'>
 					<label data-i18n-text='New device'>New device</label>
 					<button></button>
 				</div>
 				<div class='cr-dialog-tabs'>
-					<button class='cr-dialog-icon-graph cr-dialog-icon-graph-active'></button>
+					<button class='cr-dialog-icon-graph'></button>
 					<button class='cr-dialog-icon-jack'></button>
 				</div>
 				<div class='cr-dialog-content'>
@@ -54,12 +37,12 @@
 							</span>
 						</div>
 						<div class='cr-dialog-row'><label data-i18n-text='Device name'>Device name</label><input data-i18n-placeholder='Type name of the device'></div>
-						<div class='cr-dialog-remove-marker'><button data-i18n-text='Remove marker'></button></div>
+						<div class='cr-dialog-delete-marker'><button data-i18n-text='Delete marker'>Delete marker</button></div>
 					</div>
 					<div class='cr-dialog-tab-div'></div>
 				</div>
 				<div class='cr-dialog-power'><button>выкл.</button></div>
 			</div>
-		</div>	
+		</div>
     </body>
 </html>

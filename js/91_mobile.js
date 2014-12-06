@@ -1,5 +1,4 @@
 define(function(){
-	//$('#cr-page-geo').removeClass('hidden')
 	$.mobile.navigate('#cr-page-geo')
 	$('[data-role=page]').on('pageshow', function(){
 		$(this).removeClass('hidden')

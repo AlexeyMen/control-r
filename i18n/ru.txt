@@ -28,6 +28,7 @@ Fire sensor=Датчик огня
 Window sensor=Датчик открытия окна
 
 Door sensor=Датчик открытия двери
+Simple jack=Упавляемая электророзетка
 Dimmerable jack=Электророзетка-диммер
 Discret dimmerable jack=Электророзетка-вольтметр
 Dimmerable switch=Электровыключатель-диммер
