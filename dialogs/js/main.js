@@ -1,7 +1,8 @@
 define(['css'], function(requireCss){
 	$.fn.crDialog = function(page, opts){
+		var noDeviceSelected = 'Сначала выберите оборудование из списка.'
 		var device = null
-		var isReady = false
+		var isReady = function(){return !!device}
 		var dlg = $(this)
 		var marker = opts.marker
 		marker.on('dblclick', function(){
@@ -27,8 +28,8 @@ define(['css'], function(requireCss){
 		$(tabs).each(function(i, el){
 			if(i > 0) $(tabDivs[i]).hide()
 			$(el).click(function(){
-				if(!isReady){
-					alert('Сначала выберите оборудование из списка.')
+				if(!isReady()){
+					alert(noDeviceSelected)
 				   	return
 				}
 				$(tabs).each(function(ii, elel){
@@ -45,6 +46,7 @@ define(['css'], function(requireCss){
 			})
 		})
 		$(dlg).find('.cr-dialog-power button').click(function(){
+			if(!isReady()){alert(noDeviceSelected); return}
 			var onPos  = '0px 0px'
 			var offPos = '0px -34px'
 			var currPos = $(this).css('background-position')
@@ -80,7 +82,6 @@ define(['css'], function(requireCss){
 			$(nameInput).val(name)
 			$(title).text(name)
 			$(eqpSelect).prop('disabled', true)  
-			isReady = true
 			requireCss('dialogs/css/' + grp + '.css')
 			$(tabDivs[1]).load('dialogs/' + grp + '.html', function(){
 				var toLoad = 'dialogs/' + grp

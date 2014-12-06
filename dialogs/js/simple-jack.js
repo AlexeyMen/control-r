@@ -7,6 +7,8 @@ define(function(){
 			var offPos = '0px -136px'
 			var currPos = $(jackDiv).css('background-position')
 			$(jackDiv).css('background-position', /-136px/.test(currPos) ? onPos : offPos)
+			var tab2 = $(dialog).find('.cr-dialog-tabs button')[1]
+			$(tab2).trigger('click')
 		})
 	}
 })
