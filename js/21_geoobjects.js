@@ -36,7 +36,7 @@ function prepareGeoobject(boxes, objId){
 			var ul = $(clps).find('ul')[0]
 			var groups = eqpCategs[i].groups
 			groups.forEach(function(eqpLabel){
-				var eqpGrp = eqpLabel.toLowerCase().replace(/[\s\/]/, '-')
+				var eqpGrp = eqpLabel.toLowerCase().replace(/[\s\/]/g, '-')
 				var li = $('<li>').appendTo(ul)
 				var anch = $('<a href="#" data-cr-categ="' + i + '" data-i18n-text="' + eqpLabel + '" data-cr-eqgrp="' + eqpGrp + '">&nbsp;</a>').appendTo(li)
 			})

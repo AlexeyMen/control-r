@@ -18,7 +18,7 @@ define({
 		},
 		 dimmer_01: {
 			name: 'Диммер №1',
-			group: 'dimmer',
+			group: 'dimmerable-jack',
 		},
 		 meteo_01: {
 			name: 'СуперМетео №1',
@@ -104,7 +104,7 @@ define({
 		energy: {
 			groups: [
 				'Simple jack',
-				/*'Dimmerable jack',*/
+				'Dimmerable jack',
 				'Discret dimmerable jack',
 				'Dimmerable switch',
 				'Common switch',
