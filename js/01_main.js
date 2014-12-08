@@ -31,20 +31,22 @@ requirejs.config({
     conditioners:  '../media-plus/js/conditioners',
     dialogs:       '../dialogs/js/',
     dialog_main:   '../dialogs/js/main',
+    volume_plugin: 'plugins/cr-volume',
   },
 
   shim: {
-	mobile:       {deps: ['i18n', 'jquery_mobile', 'dd_markers']},
-	i18n:         {deps: ['css', 'pages', 'geoobjects', 'media']},
-	media:        {deps: ['geomap', 'audio', 'cameras', 'conditioners']},
-	audio:        {deps: ['gauge']},
-    geomap:       {deps: ['maplabel', 'custom_scroll']},
-    geoobjects:   {deps: ['geomap']},
-    maplabel:     {deps: ['mapbox']},
-    socket:       {deps: ['boxes']},
-    dd_markers:   {deps: ['i18n', 'dialog_main']},
-    dialog_main:  {deps: ['tiny_drag']},
-    tiny_drag:    {deps: ['jquery']},
+	mobile:         {deps: ['i18n', 'jquery_mobile', 'dd_markers']},
+	i18n:           {deps: ['css', 'pages', 'geoobjects', 'media']},
+	media:          {deps: ['geomap', 'audio', 'cameras', 'conditioners']},
+	audio:          {deps: ['gauge']},
+    geomap:         {deps: ['maplabel', 'custom_scroll']},
+    geoobjects:     {deps: ['geomap']},
+    maplabel:       {deps: ['mapbox']},
+    socket:         {deps: ['boxes']},
+    dd_markers:     {deps: ['i18n', 'dialog_main']},
+    dialog_main:    {deps: ['tiny_drag', 'volume_plugin']},
+    tiny_drag:    	{deps: ['jquery']},
+    volume_plugin:  {deps: ['jquery', 'css']},
   }
 })
 

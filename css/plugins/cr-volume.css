@@ -1,4 +1,3 @@
-/*
 .cr-volume-scale-bg,
 .cr-volume-scale-fg,
 .cr-volume-slider-ratio,
@@ -45,28 +44,3 @@
 	background-color: #00ded4;
 	height: 1px;
 }
-*/
-.cr-volume-scale-wrap,
-.cr-volume-slider-wrap {
-	position: absolute;
-}
-.cr-volume-slider-wrap{
-	right: 10px;
-	height: 146px;
-	width: 50px;
-}
-.cr-volume-scale-wrap {
-	left: 126px;
-	bottom: 84px;
-	height: 84px;
-	width: 154px;
-}
-.cr-dimmerable-jack-bulb{
-	width: 70px;
-	height: 100px;
-	background-image: url(../img/bg-bulb.png);
-	display: inline-block; 
-	float: left;
-	margin: 18px 0 0 38px;
-}
-

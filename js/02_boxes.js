@@ -84,7 +84,7 @@ define({
 				'Gas leak',
 				'Light sensor',
 				'Rain sensor',
-				'Temperature/humidity sensor',
+				/*'Temperature/humidity sensor',*/
 				'Presense sensor',
 				'Glass',
 				'Meteostation',
@@ -105,7 +105,7 @@ define({
 			groups: [
 				'Simple jack',
 				'Dimmerable jack',
-				'Discret dimmerable jack',
+				/* 'Discret dimmerable jack',*/
 				'Dimmerable switch',
 				'Common switch',
 				'Refrigerator',
@@ -131,7 +131,7 @@ define({
 		},
 		comfort: {
 			groups: [
-				'TV-tuner in computer',
+			/*	'TV-tuner in computer' */,
 				'DVD-player',
 				'Media center',
 				'Curtains',
