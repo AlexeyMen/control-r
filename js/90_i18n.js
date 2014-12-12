@@ -13,8 +13,7 @@ define(['boxes', 'pages', 'css'], function(boxes, preparePages, requireCss){
 	preparePages(boxes.pages)
 	$('[data-role=page]').cri18n()
 	requireCss('http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css')
-	//requireCss('css/cr-restyle.min.css')
-	requireCss('css/cr-restyle.css')
+	requireCss('css/cr-restyle.min.css')
 })
 
 

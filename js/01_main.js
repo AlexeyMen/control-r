@@ -4,7 +4,7 @@ requirejs.config({
   paths: {
 //	jquery:        'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
 	jquery:		   'vendor/jquery-2.1.1.min',
-    jquery_ui:     'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min',
+    jquery_ui:     'vendor/jquery-ui.min',
     jquery_mobile: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min',
     mapbox:        'https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox',
     maplabel:      'https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label',
@@ -43,7 +43,7 @@ requirejs.config({
     geoobjects:     {deps: ['geomap']},
     maplabel:       {deps: ['mapbox']},
     socket:         {deps: ['boxes']},
-    dd_markers:     {deps: ['i18n', 'dialog_main']},
+    dd_markers:     {deps: ['i18n', 'dialog_main', 'jquery_ui']},
     dialog_main:    {deps: ['tiny_drag', 'volume_plugin']},
     tiny_drag:    	{deps: ['jquery']},
     volume_plugin:  {deps: ['jquery', 'css']},

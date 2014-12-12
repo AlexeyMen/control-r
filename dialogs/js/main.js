@@ -57,6 +57,7 @@ define(['css'], function(requireCss){
 			$(this).text(isOff ? 'вкл.' : 'выкл.')
 		})
 		var grp = opts.group
+		var categ = opts.category
 		var nameInput = $(dlg).find('input')[0]
 		var title = $(dlg).find('.cr-dialog-header label')[0]
 		var eqpSelect = $(dlg).find('select')[0]
@@ -88,6 +89,13 @@ define(['css'], function(requireCss){
 				require([toLoad])
 				var widgetLoader = setInterval(function(){
 					if(!require.defined(toLoad)) return
+					var icon = L.divIcon({
+						iconSize: [82,100],
+						iconAnchor: [41,100],
+						className: "cr-icon-" + grp,
+						html: '<img src="img/markers/' + categ + '.png" />',
+					})
+					marker.setIcon(icon)
 					clearInterval(widgetLoader)
 					loadSpecial = require(toLoad)
 					loadSpecial(dlg, device)	  
